@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>AlfaPay — Web3 Payment Gateway</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+</head>
+<body>
+<header>
+  <div class="logo">AlfaPay</div>
+  <nav>
+    <a href="#home">Головна</a>
+    <a href="#pay">Оплата</a>
+    <a href="#api">API</a>
+    <a href="#status">Статус</a>
+    <a href="#control">Керування</a>
+    <a href="#about">Про нас</a>
+  </nav>
+</header>
+<main>
+<section id="home" class="hero">
+  <h1>AlfaPay — Web3 Payment Gateway</h1>
+  <p>Прийом SOL та токенів AF на Solana</p>
+  <button onclick="connectWallet()">Підключити Phantom Wallet</button>
+  <div id="wallet-display"></div>
+</section>
+<section id="pay">
+  <h2>Оплата SOL</h2>
+  <input id="amount" type="number" placeholder="Сума SOL">
+  <button onclick="pay()">Оплатити SOL</button>
+  <p id="pay-status"></p>
+  <h2>Оплата токеном AF</h2>
+  <input id="token-amount" type="number" placeholder="Сума AF">
+  <button onclick="payToken()">Оплатити AF</button>
+  <p id="token-status"></p>
+  <h3>QR для оплати</h3>
+  <img id="payment-qr" src="payment_qr.svg" alt="Payment QR">
+</section>
+<section id="api">
+  <h2>API AlfaPay</h2>
+  <pre>
+POST /api/pay
+{"wallet": "sender","amount": 1.0}
+GET /api/payments
+  </pre>
+</section>
+<section id="status">
+  <h2>Статус AlfaPay</h2>
+  <button onclick="checkStatus()">Оновити статус</button>
+  <ul>
+    <li>Google Verification: <span id="google-status">...</span></li>
+    <li>Web3 Wallet: <span id="wallet-status">Не підключено</span></li>
+    <li>Backend API: <span id="api-status">...</span></li>
+    <li>QR Файл: <span id="qr-status">...</span></li>
+  </ul>
+</section>
+<section id="control">
+  <h2>Керування AlfaPay</h2>
+  <button onclick="forceDeploy()">Примусовий автозапуск</button>
+  <p id="deploy-status">...</p>
+</section>
+<section id="about">
+  <h2>Про AlfaPay</h2>
+  <p>Децентралізований Web3 платіжний шлюз без банків. Працює з SOL і токенами AF на Solana.</p>
+</section>
+</main>
+<footer>© 2026 AlfaPay</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
