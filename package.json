@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.95.5",
+    "bs58": "^6.0.0",
+    "node-fetch": "^3.4.0"
+  },
+  "name": "home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "create_mint_2022.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,6 @@
+{
+  "git": {
+    "sha1": "59bb9f2aa64a89bb82efbc933fd789d32fa6371c"
+  },
+  "path_in_vcs": "crates/compression-codecs"
+}

@@ -1,0 +1,45 @@
+[package]
+name = "spl-record"
+version = "0.4.0"
+description = "Solana Program Library Record Program"
+authors = ["Anza Maintainers <maintainers@anza.xyz>"]
+repository = "https://github.com/solana-program/record"
+license = "Apache-2.0"
+edition = "2021"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+bytemuck = { version = "1.23.1", features = ["derive"] }
+num-derive = "0.4"
+num-traits = "0.2"
+solana-account-info = "3.0.0"
+solana-instruction = { version = "3.0.0", features = ["std"] }
+solana-msg = "3.0.0"
+solana-program-entrypoint = "3.0.0"
+solana-program-error = "3.0.0"
+solana-program-pack = "3.0.0"
+solana-pubkey = { version = "3.0.0", features = ["bytemuck"] }
+solana-rent = "3.0.0"
+solana-security-txt = "1.1.1"
+thiserror = "2.0.12"
+
+[dev-dependencies]
+solana-keypair = "3.0.0"
+solana-program-test = "3.0.0"
+solana-system-interface = "2"
+solana-transaction = "3.0.0"
+solana-transaction-error = "3.0.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[lints]
+workspace = true
+
+[package.metadata.solana]
+program-id = "recr1L3PCGKLbckBqMNcJhuuyU1zgo8nBhfLVsJNwr5"

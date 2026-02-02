@@ -1,0 +1,197 @@
+#!/usr/bin/env node
+// hash_daemon.mjs
+// © 2026 sash1980
+// Single-file Hash Core + Console + Git backend
+
+import crypto from "crypto";
+import fs from "fs/promises";
+import path from "path";
+import { exec } from "child_process";
+import { promisify } from "util";
+
+const execAsync = promisify(exec);
+
+/* ===================== CONFIG ===================== */
+
+const HASH_DIR = "./hash_storage";
+const ROOT_FILE = path.join(HASH_DIR, "root_hash.json");
+
+const OWNER_ID = "OWNER_ONLY";
+const HASH_GROUP_SIZE = 100;
+const BATCH_SIZE = 10;
+const MAX_MEMORY = 256;
+
+/* ===================== HASH CORE ===================== */
+
+function doubleSHA(data) {
+  const raw = Buffer.isBuffer(data)
+    ? data
+    : Buffer.from(JSON.stringify(data, Object.keys(data).sort()));
+
+  const first = crypto.createHash("sha256").update(raw).digest();
+  return crypto.createHash("sha256").update(first).digest("hex");
+}
+
+/* ===================== ROOT ===================== */
+
+class RootHash {
+  constructor() {
+    this.map = new Map();
+  }
+
+  add(level, hash, meta = {}) {
+    if (this.map.size >= MAX_MEMORY) {
+      const oldest = this.map.keys().next().value;
+      this.map.delete(oldest);
+    }
+
+    this.map.set(hash, {
+      level,
+      ts: Math.floor(Date.now() / 1000),
+      meta
+    });
+  }
+
+  build() {
+    const obj = Object.fromEntries(this.map);
+    return doubleSHA(obj);
+  }
+
+  export() {
+    return {
+      root: this.build(),
+      menu: Object.fromEntries(this.map)
+    };
+  }
+}
+
+/* ===================== MEMORY COLLECTOR ===================== */
+
+class HashCollector {
+  constructor(owner = OWNER_ID) {
+    this.owner = owner;
+    this.levels = { 0: {} };
+    this.root = new RootHash();
+  }
+
+  authorize(id) {
+    return id === this.owner;
+  }
+
+  async init() {
+    await fs.mkdir(HASH_DIR, { recursive: true });
+  }
+
+  collapse(level) {
+    const entries = Object.entries(this.levels[level]);
+    if (!entries.length) return;
+
+    const hash = doubleSHA(entries);
+    this.levels[level] = {};
+
+    const next = level + 1;
+    if (!this.levels[next]) this.levels[next] = {};
+
+    this.levels[next][hash] = { count: entries.length };
+    this.root.add(next, hash, { count: entries.length });
+
+    if (Object.keys(this.levels[next]).length >= HASH_GROUP_SIZE) {
+      this.collapse(next);
+    }
+  }
+
+  async collectBatch(list, requester = OWNER_ID) {
+    if (!this.authorize(requester)) return null;
+
+    for (let i = 0; i < list.length; i += BATCH_SIZE) {
+      const batch = list.slice(i, i + BATCH_SIZE);
+
+      const results = await Promise.all(
+        batch.map(item => Promise.resolve(doubleSHA(item)))
+      );
+
+      for (let j = 0; j < results.length; j++) {
+        const h = results[j];
+        this.levels[0][h] = batch[j];
+        this.root.add(0, h, { type: "data" });
+      }
+
+      if (Object.keys(this.levels[0]).length >= HASH_GROUP_SIZE) {
+        this.collapse(0);
+      }
+    }
+
+    return this.root.build();
+  }
+
+  async collectAudio(buffer, requester = OWNER_ID) {
+    if (!this.authorize(requester)) return null;
+
+    const h = doubleSHA(buffer);
+    this.levels[0][h] = { audio: true };
+    this.root.add(0, h, { type: "audio" });
+
+    if (Object.keys(this.levels[0]).length >= HASH_GROUP_SIZE) {
+      this.collapse(0);
+    }
+
+    return h;
+  }
+
+  async exportGit() {
+    const data = this.root.export();
+    await fs.writeFile(ROOT_FILE, JSON.stringify(data, null, 2));
+
+    try {
+      await execAsync("git add .");
+      await execAsync("git commit -m \"update root hash\"");
+      await execAsync("git push");
+    } catch {
+      console.log("⚠ git push skipped (repo may already be clean)");
+    }
+
+    return data;
+  }
+}
+
+/* ===================== CONSOLE ===================== */
+
+function showMenu(rootData) {
+  console.log("\n=== ROOT HASH MENU ===");
+  let i = 1;
+  for (const [h, v] of Object.entries(rootData.menu)) {
+    console.log(
+      `${i}. ${h.slice(0, 12)} | level=${v.level} | ${v.meta?.type || "data"}`
+    );
+    i++;
+  }
+}
+
+/* ===================== MAIN ===================== */
+
+async function main() {
+  const collector = new HashCollector();
+  await collector.init();
+
+  console.log("▶ Hash daemon started");
+
+  // demo batch
+  const batch = Array.from({ length: 50 }, (_, i) => ({
+    frame: i,
+    time: Date.now()
+  }));
+
+  await collector.collectBatch(batch);
+  await collector.collectAudio(Buffer.from("FAKE_AUDIO_STREAM"));
+
+  const root = await collector.exportGit();
+
+  console.log("\nROOT HASH:", root.root);
+  showMenu(root);
+
+  console.log("\n✔ Done");
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}

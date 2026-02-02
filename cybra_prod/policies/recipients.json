@@ -1,0 +1,5 @@
+{
+  "whitelist": [
+    {"id":"WL_IBAN_ESTATE_001","iban":"UA-ESTATE-001","purpose":"property_tax","cap_per_txn":2000,"cap_per_day":10000}
+  ]
+}

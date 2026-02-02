@@ -1,0 +1,38 @@
+[package]
+name = "spl-tlv-account-resolution"
+version = "0.11.1"
+description = "Solana Program Library TLV Account Resolution Interface"
+authors = ["Anza Maintainers <maintainers@anza.xyz>"]
+repository = "https://github.com/solana-program/libraries"
+license = "Apache-2.0"
+edition = "2021"
+
+[features]
+serde-traits = ["dep:serde"]
+
+[dependencies]
+bytemuck = { version = "1.23.2", features = ["derive"] }
+num-derive = "0.4"
+num_enum = "0.7"
+num-traits = "0.2"
+serde = { version = "1.0.228", optional = true }
+solana-account-info = "3.0.0"
+solana-instruction = { version = "3.0.0", features = ["std"] }
+solana-program-error = "3.0.0"
+solana-pubkey = { version = "3.0.0", features = ["curve25519"] }
+spl-discriminator = { version = "0.5.1", path = "../discriminator" }
+spl-program-error = { version = "0.8.0", path = "../program-error" }
+spl-pod = { version = "0.7.1", path = "../pod" }
+spl-type-length-value = { version = "0.9.0", path = "../type-length-value" }
+thiserror = "2.0"
+
+[dev-dependencies]
+futures = "0.3.31"
+futures-util = "0.3"
+tokio = { version = "1", features = ["rt", "macros"] }
+
+[lib]
+crate-type = ["lib"]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

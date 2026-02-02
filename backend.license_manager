@@ -1,0 +1,17 @@
+import hashlib, time
+
+class LicenseManager:
+    def __init__(self):
+        self.active_licenses = {}  # token_hash -> metadata
+
+    def issue_license(self, buyer_id: str, duration_sec: int):
+        raw = f"{buyer_id}-{time.time()}-{duration_sec}"
+        token_hash = hashlib.sha256(raw.encode()).hexdigest()
+        self.active_licenses[token_hash] = {"buyer_id": buyer_id, "expiry": time.time()+duration_sec}
+        return token_hash
+
+    def verify_license(self, token_hash: str):
+        meta = self.active_licenses.get(token_hash)
+        if not meta: return False
+        if time.time() > meta["expiry"]: return False
+        return True
