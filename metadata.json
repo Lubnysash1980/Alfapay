@@ -1,10 +1,21 @@
 {
-  "name": "Dii",
-  "symbol": "D",
-  "description": "Dii utility token",
-  "image": "https://copilot.microsoft.com/shares/9Go93ppznghs5j7tG2L4r",
+  "name": "IREN",
+  "symbol": "R",
+  "description": "Utility token IREN on Solana",
+  "image": "https://lubnysash1980.github.io/Alfapay/logo.png",
+  "external_url": "https://lubnysash1980.github.io/Alfapay/",
   "external_url": "https://lubnysash1980.github.io/Alfapay/",
   "attributes": [
-    { "trait_type": "Type", "value": "Utility" }
-  ]
+    { "trait_type": "Type", "value": "Fungible Token" }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://lubnysash1980.github.io/Alfapay/logo.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
 }
+
