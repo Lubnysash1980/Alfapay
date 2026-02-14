@@ -1,0 +1,50 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.8.0
+2 info using node@v24.13.0
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/.npmrc
+5 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+6 verbose title npm install bs58
+7 verbose argv "install" "bs58"
+8 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2026-02-14T22_38_13_402Z-
+9 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2026-02-14T22_38_13_402Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly packumentCache heap:1044905984 maxSize:261226496 maxEntrySize:130613248
+12 silly logfile done cleaning log files
+13 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+14 silly idealTree buildDeps
+15 silly fetch manifest bs58@^6.0.0
+16 silly packumentCache full:https://registry.npmjs.org/bs58 cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/bs58 1588ms (cache revalidated)
+18 silly packumentCache full:https://registry.npmjs.org/bs58 set size:28639 disposed:false
+19 silly fetch manifest node-fetch@^3.4.0
+20 silly packumentCache full:https://registry.npmjs.org/node-fetch cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/node-fetch 121ms (cache revalidated)
+22 silly packumentCache full:https://registry.npmjs.org/node-fetch set size:896010 disposed:false
+23 silly placeDep ROOT bs58@6.0.0 REPLACE for: home@1.0.0 want: ^6.0.0
+24 silly placeDep ROOT node-fetch@ REPLACE for: home@1.0.0 want: ^3.4.0
+25 verbose type range
+26 verbose stack node-fetch: No matching version found for node-fetch@^3.4.0.
+26 verbose stack     at module.exports (/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/npm-pick-manifest/lib/index.js:210:23)
+26 verbose stack     at RegistryFetcher.manifest (/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/pacote/lib/registry.js:130:54)
+26 verbose stack     at async #fetchManifest (/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1216:20)
+26 verbose stack     at async #nodeFromEdge (/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1054:19)
+26 verbose stack     at async #buildDepStep (/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:918:11)
+26 verbose stack     at async Arborist.buildIdealTree (/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:170:7)
+26 verbose stack     at async Promise.all (index 1)
+26 verbose stack     at async Arborist.reify (/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:110:5)
+26 verbose stack     at async Install.exec (/data/data/com.termux/files/usr/lib/node_modules/npm/lib/commands/install.js:150:5)
+26 verbose stack     at async Npm.exec (/data/data/com.termux/files/usr/lib/node_modules/npm/lib/npm.js:208:9)
+27 error code ETARGET
+28 error notarget No matching version found for node-fetch@^3.4.0.
+29 error notarget In most cases you or one of your dependencies are requesting
+29 error notarget a package version that doesn't exist.
+30 silly unfinished npm timer reify 1771108695947
+31 silly unfinished npm timer reify:loadTrees 1771108695955
+32 verbose cwd /data/data/com.termux/files/home
+33 verbose os Linux 5.15.167-android13-8-31192385-abA057GXXS9DYJ1
+34 verbose node v24.13.0
+35 verbose npm  v11.8.0
+36 verbose exit 1
+37 verbose code 1
+38 error A complete log of this run can be found in: /data/data/com.termux/files/home/.npm/_logs/2026-02-14T22_38_13_402Z-debug-0.log

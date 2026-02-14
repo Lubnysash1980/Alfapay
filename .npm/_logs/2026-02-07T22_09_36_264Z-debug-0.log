@@ -1,0 +1,39 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.8.0
+2 info using node@v25.3.0
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/.npmrc
+5 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+6 verbose title npm init
+7 verbose argv "init" "--yes"
+8 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2026-02-07T22_09_36_264Z-
+9 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2026-02-07T22_09_36_264Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly logfile done cleaning log files
+12 silly package data {
+12 silly package data   name: 'solana-token-script',
+12 silly package data   version: '1.0.0',
+12 silly package data   type: 'module',
+12 silly package data   main: '00.mjs',
+12 silly package data   scripts: { start: 'node 00.mjs' },
+12 silly package data   dependencies: {
+12 silly package data     '@metaplex-foundation/mpl-token-metadata': '^2.9.2',
+12 silly package data     '@solana/spl-token': '^0.4.0',
+12 silly package data     '@solana/web3.js': '^1.95.3',
+12 silly package data     bs58: '^5.0.0',
+12 silly package data     inquirer: '^13.2.2'
+12 silly package data   },
+12 silly package data   description: '',
+12 silly package data   devDependencies: {},
+12 silly package data   keywords: [],
+12 silly package data   author: '',
+12 silly package data   license: 'ISC',
+12 silly package data   Symbol(newline): '\n',
+12 silly package data   Symbol(indent): '  '
+12 silly package data }
+13 verbose cwd /data/data/com.termux/files/home
+14 verbose os Linux 5.15.167-android13-8-31192385-abA057GXXS9DYJ1
+15 verbose node v25.3.0
+16 verbose npm  v11.8.0
+17 verbose exit 0
+18 info ok

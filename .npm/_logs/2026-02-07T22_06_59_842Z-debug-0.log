@@ -1,0 +1,256 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.8.0
+2 info using node@v25.3.0
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/.npmrc
+5 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+6 verbose title npm install inquirer
+7 verbose argv "install" "--global" "inquirer"
+8 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2026-02-07T22_06_59_842Z-
+9 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2026-02-07T22_06_59_842Z-debug-0.log
+10 silly packumentCache heap:1044905984 maxSize:261226496 maxEntrySize:130613248
+11 silly logfile start cleaning logs, removing 1 files
+12 silly idealTree buildDeps
+13 silly fetch manifest inquirer@*
+14 silly packumentCache full:https://registry.npmjs.org/inquirer cache-miss
+15 silly logfile done cleaning log files
+16 http cache https://registry.npmjs.org/inquirer 64ms (cache hit)
+17 silly packumentCache full:https://registry.npmjs.org/inquirer set size:590394 disposed:false
+18 silly placeDep ROOT inquirer@13.2.2 OK for:  want: *
+19 silly fetch manifest @inquirer/ansi@^2.0.3
+20 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fansi cache-miss
+21 silly fetch manifest @inquirer/core@^11.1.1
+22 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fcore cache-miss
+23 silly fetch manifest @inquirer/prompts@^8.2.0
+24 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fprompts cache-miss
+25 silly fetch manifest @inquirer/type@^4.0.3
+26 silly packumentCache full:https://registry.npmjs.org/@inquirer%2ftype cache-miss
+27 silly fetch manifest mute-stream@^3.0.0
+28 silly packumentCache full:https://registry.npmjs.org/mute-stream cache-miss
+29 http cache https://registry.npmjs.org/@inquirer%2fansi 38ms (cache hit)
+30 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fansi set size:19800 disposed:false
+31 silly fetch manifest run-async@^4.0.6
+32 silly packumentCache full:https://registry.npmjs.org/run-async cache-miss
+33 http cache https://registry.npmjs.org/@inquirer%2fcore 44ms (cache hit)
+34 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fcore set size:324204 disposed:false
+35 silly fetch manifest rxjs@^7.8.2
+36 silly packumentCache full:https://registry.npmjs.org/rxjs cache-miss
+37 http cache https://registry.npmjs.org/@inquirer%2fprompts 61ms (cache hit)
+38 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fprompts set size:300040 disposed:false
+39 http cache https://registry.npmjs.org/mute-stream 69ms (cache hit)
+40 silly packumentCache full:https://registry.npmjs.org/mute-stream set size:21918 disposed:false
+41 http cache https://registry.npmjs.org/@inquirer%2ftype 74ms (cache hit)
+42 silly packumentCache full:https://registry.npmjs.org/@inquirer%2ftype set size:110497 disposed:false
+43 http cache https://registry.npmjs.org/run-async 69ms (cache hit)
+44 silly packumentCache full:https://registry.npmjs.org/run-async set size:30788 disposed:false
+45 http cache https://registry.npmjs.org/rxjs 60ms (cache hit)
+46 silly packumentCache full:https://registry.npmjs.org/rxjs set size:980097 disposed:false
+47 silly fetch manifest @types/node@>=18
+48 silly packumentCache full:https://registry.npmjs.org/@types%2fnode cache-miss
+49 http cache https://registry.npmjs.org/@types%2fnode 123ms (cache hit)
+50 silly packumentCache full:https://registry.npmjs.org/@types%2fnode set size:10833619 disposed:false
+51 silly placeDep node_modules/inquirer @inquirer/ansi@2.0.3 OK for: inquirer@13.2.2 want: ^2.0.3
+52 silly placeDep node_modules/inquirer @inquirer/core@11.1.1 OK for: inquirer@13.2.2 want: ^11.1.1
+53 silly placeDep node_modules/inquirer @inquirer/prompts@8.2.0 OK for: inquirer@13.2.2 want: ^8.2.0
+54 silly placeDep node_modules/inquirer @inquirer/type@4.0.3 OK for: inquirer@13.2.2 want: ^4.0.3
+55 silly placeDep node_modules/inquirer mute-stream@3.0.0 OK for: inquirer@13.2.2 want: ^3.0.0
+56 silly placeDep node_modules/inquirer run-async@4.0.6 OK for: inquirer@13.2.2 want: ^4.0.6
+57 silly placeDep node_modules/inquirer rxjs@7.8.2 OK for: inquirer@13.2.2 want: ^7.8.2
+58 silly fetch manifest @inquirer/figures@^2.0.3
+59 silly packumentCache full:https://registry.npmjs.org/@inquirer%2ffigures cache-miss
+60 silly fetch manifest cli-width@^4.1.0
+61 silly packumentCache full:https://registry.npmjs.org/cli-width cache-miss
+62 silly fetch manifest signal-exit@^4.1.0
+63 silly packumentCache full:https://registry.npmjs.org/signal-exit cache-miss
+64 silly fetch manifest wrap-ansi@^9.0.2
+65 silly packumentCache full:https://registry.npmjs.org/wrap-ansi cache-miss
+66 silly fetch manifest @inquirer/checkbox@^5.0.4
+67 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fcheckbox cache-miss
+68 http cache https://registry.npmjs.org/cli-width 46ms (cache hit)
+69 silly packumentCache full:https://registry.npmjs.org/cli-width set size:24976 disposed:false
+70 silly fetch manifest @inquirer/confirm@^6.0.4
+71 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fconfirm cache-miss
+72 http cache https://registry.npmjs.org/wrap-ansi 48ms (cache hit)
+73 silly packumentCache full:https://registry.npmjs.org/wrap-ansi set size:51195 disposed:false
+74 silly fetch manifest @inquirer/editor@^5.0.4
+75 silly packumentCache full:https://registry.npmjs.org/@inquirer%2feditor cache-miss
+76 http cache https://registry.npmjs.org/@inquirer%2ffigures 59ms (cache hit)
+77 silly packumentCache full:https://registry.npmjs.org/@inquirer%2ffigures set size:48062 disposed:false
+78 silly fetch manifest @inquirer/expand@^5.0.4
+79 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fexpand cache-miss
+80 http cache https://registry.npmjs.org/signal-exit 62ms (cache hit)
+81 silly packumentCache full:https://registry.npmjs.org/signal-exit set size:53489 disposed:false
+82 silly fetch manifest @inquirer/input@^5.0.4
+83 silly packumentCache full:https://registry.npmjs.org/@inquirer%2finput cache-miss
+84 http cache https://registry.npmjs.org/@inquirer%2fcheckbox 66ms (cache hit)
+85 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fcheckbox set size:318534 disposed:false
+86 silly fetch manifest @inquirer/number@^4.0.4
+87 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fnumber cache-miss
+88 http cache https://registry.npmjs.org/@inquirer%2feditor 44ms (cache hit)
+89 silly packumentCache full:https://registry.npmjs.org/@inquirer%2feditor set size:292907 disposed:false
+90 silly fetch manifest @inquirer/password@^5.0.4
+91 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fpassword cache-miss
+92 http cache https://registry.npmjs.org/@inquirer%2fexpand 51ms (cache hit)
+93 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fexpand set size:292632 disposed:false
+94 silly fetch manifest @inquirer/rawlist@^5.2.0
+95 silly packumentCache full:https://registry.npmjs.org/@inquirer%2frawlist cache-miss
+96 http cache https://registry.npmjs.org/@inquirer%2finput 57ms (cache hit)
+97 silly packumentCache full:https://registry.npmjs.org/@inquirer%2finput set size:289994 disposed:false
+98 silly fetch manifest @inquirer/search@^4.1.0
+99 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fsearch cache-miss
+100 http cache https://registry.npmjs.org/@inquirer%2fconfirm 86ms (cache hit)
+101 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fconfirm set size:293808 disposed:false
+102 silly fetch manifest @inquirer/select@^5.0.4
+103 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fselect cache-miss
+104 http cache https://registry.npmjs.org/@inquirer%2fnumber 72ms (cache hit)
+105 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fnumber set size:115566 disposed:false
+106 silly fetch manifest tslib@^2.1.0
+107 silly packumentCache full:https://registry.npmjs.org/tslib cache-miss
+108 http cache https://registry.npmjs.org/@inquirer%2fpassword 63ms (cache hit)
+109 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fpassword set size:291455 disposed:false
+110 http cache https://registry.npmjs.org/@inquirer%2frawlist 62ms (cache hit)
+111 silly packumentCache full:https://registry.npmjs.org/@inquirer%2frawlist set size:261582 disposed:false
+112 http cache https://registry.npmjs.org/@inquirer%2fsearch 59ms (cache hit)
+113 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fsearch set size:115655 disposed:false
+114 http cache https://registry.npmjs.org/@inquirer%2fselect 135ms (cache hit)
+115 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fselect set size:307392 disposed:false
+116 http fetch GET 200 https://registry.npmjs.org/tslib 606ms (cache revalidated)
+117 silly packumentCache full:https://registry.npmjs.org/tslib set size:108760 disposed:false
+118 silly placeDep node_modules/inquirer @inquirer/figures@2.0.3 OK for: @inquirer/core@11.1.1 want: ^2.0.3
+119 silly placeDep node_modules/inquirer cli-width@4.1.0 OK for: @inquirer/core@11.1.1 want: ^4.1.0
+120 silly placeDep node_modules/inquirer signal-exit@4.1.0 OK for: @inquirer/core@11.1.1 want: ^4.1.0
+121 silly placeDep node_modules/inquirer wrap-ansi@9.0.2 OK for: @inquirer/core@11.1.1 want: ^9.0.2
+122 silly fetch manifest strip-ansi@^7.1.0
+123 silly packumentCache full:https://registry.npmjs.org/strip-ansi cache-miss
+124 silly fetch manifest ansi-styles@^6.2.1
+125 silly packumentCache full:https://registry.npmjs.org/ansi-styles cache-miss
+126 silly fetch manifest string-width@^7.0.0
+127 silly packumentCache full:https://registry.npmjs.org/string-width cache-miss
+128 http cache https://registry.npmjs.org/string-width 17ms (cache hit)
+129 silly packumentCache full:https://registry.npmjs.org/string-width set size:66232 disposed:false
+130 http cache https://registry.npmjs.org/strip-ansi 24ms (cache hit)
+131 silly packumentCache full:https://registry.npmjs.org/strip-ansi set size:41855 disposed:false
+132 http cache https://registry.npmjs.org/ansi-styles 27ms (cache hit)
+133 silly packumentCache full:https://registry.npmjs.org/ansi-styles set size:63233 disposed:false
+134 silly placeDep node_modules/inquirer @inquirer/checkbox@5.0.4 OK for: @inquirer/prompts@8.2.0 want: ^5.0.4
+135 silly placeDep node_modules/inquirer @inquirer/confirm@6.0.4 OK for: @inquirer/prompts@8.2.0 want: ^6.0.4
+136 silly placeDep node_modules/inquirer @inquirer/editor@5.0.4 OK for: @inquirer/prompts@8.2.0 want: ^5.0.4
+137 silly placeDep node_modules/inquirer @inquirer/expand@5.0.4 OK for: @inquirer/prompts@8.2.0 want: ^5.0.4
+138 silly placeDep node_modules/inquirer @inquirer/input@5.0.4 OK for: @inquirer/prompts@8.2.0 want: ^5.0.4
+139 silly placeDep node_modules/inquirer @inquirer/number@4.0.4 OK for: @inquirer/prompts@8.2.0 want: ^4.0.4
+140 silly placeDep node_modules/inquirer @inquirer/password@5.0.4 OK for: @inquirer/prompts@8.2.0 want: ^5.0.4
+141 silly placeDep node_modules/inquirer @inquirer/rawlist@5.2.0 OK for: @inquirer/prompts@8.2.0 want: ^5.2.0
+142 silly placeDep node_modules/inquirer @inquirer/search@4.1.0 OK for: @inquirer/prompts@8.2.0 want: ^4.1.0
+143 silly placeDep node_modules/inquirer @inquirer/select@5.0.4 OK for: @inquirer/prompts@8.2.0 want: ^5.0.4
+144 silly fetch manifest @inquirer/external-editor@^2.0.3
+145 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fexternal-editor cache-miss
+146 http cache https://registry.npmjs.org/@inquirer%2fexternal-editor 13ms (cache hit)
+147 silly packumentCache full:https://registry.npmjs.org/@inquirer%2fexternal-editor set size:27856 disposed:false
+148 silly placeDep node_modules/inquirer @inquirer/external-editor@2.0.3 OK for: @inquirer/editor@5.0.4 want: ^2.0.3
+149 silly fetch manifest chardet@^2.1.1
+150 silly packumentCache full:https://registry.npmjs.org/chardet cache-miss
+151 silly fetch manifest iconv-lite@^0.7.2
+152 silly packumentCache full:https://registry.npmjs.org/iconv-lite cache-miss
+153 http cache https://registry.npmjs.org/chardet 20ms (cache hit)
+154 silly packumentCache full:https://registry.npmjs.org/chardet set size:70553 disposed:false
+155 http cache https://registry.npmjs.org/iconv-lite 25ms (cache hit)
+156 silly packumentCache full:https://registry.npmjs.org/iconv-lite set size:120557 disposed:false
+157 silly placeDep node_modules/inquirer chardet@2.1.1 OK for: @inquirer/external-editor@2.0.3 want: ^2.1.1
+158 silly placeDep node_modules/inquirer iconv-lite@0.7.2 OK for: @inquirer/external-editor@2.0.3 want: ^0.7.2
+159 silly fetch manifest safer-buffer@>= 2.1.2 < 3.0.0
+160 silly packumentCache full:https://registry.npmjs.org/safer-buffer cache-miss
+161 http cache https://registry.npmjs.org/safer-buffer 10ms (cache hit)
+162 silly packumentCache full:https://registry.npmjs.org/safer-buffer set size:18521 disposed:false
+163 silly placeDep node_modules/inquirer safer-buffer@2.1.2 OK for: iconv-lite@0.7.2 want: >= 2.1.2 < 3.0.0
+164 silly placeDep node_modules/inquirer tslib@2.8.1 OK for: rxjs@7.8.2 want: ^2.1.0
+165 silly placeDep node_modules/inquirer ansi-styles@6.2.3 OK for: wrap-ansi@9.0.2 want: ^6.2.1
+166 silly placeDep node_modules/inquirer string-width@7.2.0 OK for: wrap-ansi@9.0.2 want: ^7.0.0
+167 silly placeDep node_modules/inquirer strip-ansi@7.1.2 OK for: wrap-ansi@9.0.2 want: ^7.1.0
+168 silly fetch manifest emoji-regex@^10.3.0
+169 silly packumentCache full:https://registry.npmjs.org/emoji-regex cache-miss
+170 silly fetch manifest get-east-asian-width@^1.0.0
+171 silly packumentCache full:https://registry.npmjs.org/get-east-asian-width cache-miss
+172 silly fetch manifest ansi-regex@^6.0.1
+173 silly packumentCache full:https://registry.npmjs.org/ansi-regex cache-miss
+174 http cache https://registry.npmjs.org/emoji-regex 13ms (cache hit)
+175 silly packumentCache full:https://registry.npmjs.org/emoji-regex set size:89088 disposed:false
+176 http cache https://registry.npmjs.org/get-east-asian-width 22ms (cache hit)
+177 silly packumentCache full:https://registry.npmjs.org/get-east-asian-width set size:16137 disposed:false
+178 http cache https://registry.npmjs.org/ansi-regex 25ms (cache hit)
+179 silly packumentCache full:https://registry.npmjs.org/ansi-regex set size:43572 disposed:false
+180 silly placeDep node_modules/inquirer emoji-regex@10.6.0 OK for: string-width@7.2.0 want: ^10.3.0
+181 silly placeDep node_modules/inquirer get-east-asian-width@1.4.0 OK for: string-width@7.2.0 want: ^1.0.0
+182 silly placeDep node_modules/inquirer ansi-regex@6.2.2 OK for: strip-ansi@7.1.2 want: ^6.0.1
+183 silly reify moves {}
+184 http cache inquirer@https://registry.npmjs.org/inquirer/-/inquirer-13.2.2.tgz 0ms (cache hit)
+185 http cache get-east-asian-width@https://registry.npmjs.org/get-east-asian-width/-/get-east-asian-width-1.4.0.tgz 0ms (cache hit)
+186 http cache emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.6.0.tgz 0ms (cache hit)
+187 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz 0ms (cache hit)
+188 http cache ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz 0ms (cache hit)
+189 http cache tslib@https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz 0ms (cache hit)
+190 http cache safer-buffer@https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz 0ms (cache hit)
+191 http cache iconv-lite@https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.7.2.tgz 0ms (cache hit)
+192 http cache chardet@https://registry.npmjs.org/chardet/-/chardet-2.1.1.tgz 0ms (cache hit)
+193 http cache @inquirer/select@https://registry.npmjs.org/@inquirer/select/-/select-5.0.4.tgz 0ms (cache hit)
+194 http cache ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz 0ms (cache hit)
+195 http cache @inquirer/search@https://registry.npmjs.org/@inquirer/search/-/search-4.1.0.tgz 0ms (cache hit)
+196 http cache string-width@https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz 0ms (cache hit)
+197 http cache @inquirer/external-editor@https://registry.npmjs.org/@inquirer/external-editor/-/external-editor-2.0.3.tgz 0ms (cache hit)
+198 http cache @inquirer/rawlist@https://registry.npmjs.org/@inquirer/rawlist/-/rawlist-5.2.0.tgz 0ms (cache hit)
+199 http cache @inquirer/password@https://registry.npmjs.org/@inquirer/password/-/password-5.0.4.tgz 0ms (cache hit)
+200 http cache @inquirer/number@https://registry.npmjs.org/@inquirer/number/-/number-4.0.4.tgz 1ms (cache hit)
+201 http cache @inquirer/input@https://registry.npmjs.org/@inquirer/input/-/input-5.0.4.tgz 0ms (cache hit)
+202 http cache @inquirer/expand@https://registry.npmjs.org/@inquirer/expand/-/expand-5.0.4.tgz 0ms (cache hit)
+203 http cache @inquirer/editor@https://registry.npmjs.org/@inquirer/editor/-/editor-5.0.4.tgz 0ms (cache hit)
+204 http cache @inquirer/confirm@https://registry.npmjs.org/@inquirer/confirm/-/confirm-6.0.4.tgz 0ms (cache hit)
+205 http cache wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-9.0.2.tgz 0ms (cache hit)
+206 http cache signal-exit@https://registry.npmjs.org/signal-exit/-/signal-exit-4.1.0.tgz 1ms (cache hit)
+207 http cache @inquirer/figures@https://registry.npmjs.org/@inquirer/figures/-/figures-2.0.3.tgz 0ms (cache hit)
+208 http cache @inquirer/checkbox@https://registry.npmjs.org/@inquirer/checkbox/-/checkbox-5.0.4.tgz 0ms (cache hit)
+209 http cache rxjs@https://registry.npmjs.org/rxjs/-/rxjs-7.8.2.tgz 0ms (cache hit)
+210 http cache mute-stream@https://registry.npmjs.org/mute-stream/-/mute-stream-3.0.0.tgz 0ms (cache hit)
+211 http cache cli-width@https://registry.npmjs.org/cli-width/-/cli-width-4.1.0.tgz 0ms (cache hit)
+212 http cache @inquirer/type@https://registry.npmjs.org/@inquirer/type/-/type-4.0.3.tgz 0ms (cache hit)
+213 http cache @inquirer/core@https://registry.npmjs.org/@inquirer/core/-/core-11.1.1.tgz 1ms (cache hit)
+214 http cache @inquirer/ansi@https://registry.npmjs.org/@inquirer/ansi/-/ansi-2.0.3.tgz 0ms (cache hit)
+215 http cache run-async@https://registry.npmjs.org/run-async/-/run-async-4.0.6.tgz 0ms (cache hit)
+216 http cache @inquirer/prompts@https://registry.npmjs.org/@inquirer/prompts/-/prompts-8.2.0.tgz 0ms (cache hit)
+217 silly ADD node_modules/inquirer
+218 silly ADD node_modules/inquirer/node_modules/ansi-regex
+219 silly ADD node_modules/inquirer/node_modules/get-east-asian-width
+220 silly ADD node_modules/inquirer/node_modules/emoji-regex
+221 silly ADD node_modules/inquirer/node_modules/strip-ansi
+222 silly ADD node_modules/inquirer/node_modules/string-width
+223 silly ADD node_modules/inquirer/node_modules/ansi-styles
+224 silly ADD node_modules/inquirer/node_modules/tslib
+225 silly ADD node_modules/inquirer/node_modules/safer-buffer
+226 silly ADD node_modules/inquirer/node_modules/iconv-lite
+227 silly ADD node_modules/inquirer/node_modules/chardet
+228 silly ADD node_modules/inquirer/node_modules/@inquirer/external-editor
+229 silly ADD node_modules/inquirer/node_modules/@inquirer/select
+230 silly ADD node_modules/inquirer/node_modules/@inquirer/search
+231 silly ADD node_modules/inquirer/node_modules/@inquirer/rawlist
+232 silly ADD node_modules/inquirer/node_modules/@inquirer/password
+233 silly ADD node_modules/inquirer/node_modules/@inquirer/number
+234 silly ADD node_modules/inquirer/node_modules/@inquirer/input
+235 silly ADD node_modules/inquirer/node_modules/@inquirer/expand
+236 silly ADD node_modules/inquirer/node_modules/@inquirer/editor
+237 silly ADD node_modules/inquirer/node_modules/@inquirer/confirm
+238 silly ADD node_modules/inquirer/node_modules/@inquirer/checkbox
+239 silly ADD node_modules/inquirer/node_modules/wrap-ansi
+240 silly ADD node_modules/inquirer/node_modules/signal-exit
+241 silly ADD node_modules/inquirer/node_modules/cli-width
+242 silly ADD node_modules/inquirer/node_modules/@inquirer/figures
+243 silly ADD node_modules/inquirer/node_modules/rxjs
+244 silly ADD node_modules/inquirer/node_modules/run-async
+245 silly ADD node_modules/inquirer/node_modules/mute-stream
+246 silly ADD node_modules/inquirer/node_modules/@inquirer/type
+247 silly ADD node_modules/inquirer/node_modules/@inquirer/prompts
+248 silly ADD node_modules/inquirer/node_modules/@inquirer/core
+249 silly ADD node_modules/inquirer/node_modules/@inquirer/ansi
+250 verbose cwd /data/data/com.termux/files/home
+251 verbose os Linux 5.15.167-android13-8-31192385-abA057GXXS9DYJ1
+252 verbose node v25.3.0
+253 verbose npm  v11.8.0
+254 verbose exit 0
+255 info ok

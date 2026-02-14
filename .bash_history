@@ -110,3 +110,9 @@ python 5.py
 nano 0.sh 
 ./0.sh
 cat >0.sh
+cat token.mjs
+node cybragithash.mjsnode cybragithash.mjs
+node cybragithash.mjs
+8n.
+node cybragithash.mjs
+cat tt12.02.mjs
