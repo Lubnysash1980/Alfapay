@@ -69,6 +69,7 @@ while true; do
   echo "64) Переглянути git-статус (зміни у файлах)"
   echo "65) Створити нову git-гілку"
   echo "66) Злити поточну гілку у main"
+  echo "72) Запустити AI‑стек (Node + Python)"
   echo "0) Вихід"
   read -p "Ваш вибір: " choice
 
